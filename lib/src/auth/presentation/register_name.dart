@@ -435,7 +435,7 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                                 ),
                                 children: [
                                   TextSpan(
-                                    text: '  *',
+                                    text: '  ',
                                     style: TextStyle(
                                       color: Colors.red,
                                     ),
@@ -455,7 +455,7 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                                       child: Column(
                                         children: const [
                                           Text(
-                                            'မိမိရဲ့လျှို့ဝှက်နံပါတ်ကို မေ့သွားခဲ့ရင် မိမိရဲ့ မွေးသက္ကရာဇကို သုံးပြီး လျှို့ဝှက်နံပါတ်ကို ပြောင်းလဲနိုင်ပါတယ်။',
+                                            'မိမိရဲ့လျှို့ဝှက်နံပါတ်ကို မေ့သွားခဲ့ရင် မိမိရဲ့ မွေးသက္ကရာဇ်ကို သုံးပြီး လျှို့ဝှက်နံပါတ်ကို ပြောင်းလဲနိုင်ပါတယ်။',
                                           )
                                         ],
                                       ),
@@ -674,7 +674,7 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                               ),
                               children: [
                                 TextSpan(
-                                    text: '  *',
+                                    text: '  ',
                                     style: TextStyle(
                                       color: Colors.red,
                                     ))
@@ -822,13 +822,13 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                         const SizedBox(height: 12),
                         const Text.rich(
                           TextSpan(
-                              text: 'Category / အမျိုးအစား',
+                              text: 'User Type / အသုံးပြုသူအမျိုးအစား',
                               style: TextStyle(
                                 color: Colors.white,
                               ),
                               children: [
                                 TextSpan(
-                                    text: '  *',
+                                    text: '  ',
                                     style: TextStyle(
                                       color: Colors.red,
                                     ))
@@ -848,7 +848,7 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                             ),
                             isExpanded: true,
                             hint: const Text(
-                              "Category / အမျိုးအစား",
+                              "User Type / အသုံးပြုသူအမျိုးအစား",
                               style: TextStyle(fontSize: 16),
                             ),
                             icon: const Icon(
@@ -1150,11 +1150,11 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                         ),
                         if (agree &&
                             userNameController.text.isNotEmpty &&
-                            stateSelected != null &&
+                            // stateSelected != null &&
                             categorySelected != null &&
-                            dateSelected != null &&
-                            monthSelected != null &&
-                            yearSelected != null &&
+                            // dateSelected != null &&
+                            // monthSelected != null &&
+                            // yearSelected != null &&
                             passwordController.text.isNotEmpty &&
                             confirmPasswordController.text.isNotEmpty)
                           Padding(
@@ -1192,10 +1192,12 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                                         dob:
                                             "$yearSelected-${Util.convertMonthToString(monthSelected!)}-${dateSelected!.length == 1 ? "0$dateSelected" : dateSelected}",
                                         state: stateSelected.toString(),
-                                        userType: categorySelected
-                                            .toString()
-                                            .toLowerCase()
-                                            .split(" ")[0],
+                                        userType: categorySelected == null
+                                            ? "farmer"
+                                            : categorySelected
+                                                .toString()
+                                                .toLowerCase()
+                                                .split(" ")[0],
                                         profession: professionalController.text
                                             .toString(),
                                       );
