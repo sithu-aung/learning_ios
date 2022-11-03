@@ -1151,7 +1151,7 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                         if (agree &&
                             userNameController.text.isNotEmpty &&
                             // stateSelected != null &&
-                            categorySelected != null &&
+                           // categorySelected != null &&
                             // dateSelected != null &&
                             // monthSelected != null &&
                             // yearSelected != null &&
