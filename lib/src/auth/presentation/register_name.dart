@@ -522,13 +522,13 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                                           ),
                                         ))
                                     .toList(),
-                                validator: (value) {
-                                  if (value == null ||
-                                      value.toString().isEmpty) {
-                                    return "Please Select Birth Day";
-                                  }
-                                  return null;
-                                },
+                                // validator: (value) {
+                                //   if (value == null ||
+                                //       value.toString().isEmpty) {
+                                //     return "Please Select Birth Day";
+                                //   }
+                                //   return null;
+                                // },
                                 onChanged: (value) {
                                   setState(() {
                                     dateSelected = value.toString();
@@ -584,13 +584,13 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                                           ),
                                         ))
                                     .toList(),
-                                validator: (value) {
-                                  if (value == null ||
-                                      value.toString().isEmpty) {
-                                    return "Please Select Birth Month";
-                                  }
-                                  return null;
-                                },
+                                // validator: (value) {
+                                //   if (value == null ||
+                                //       value.toString().isEmpty) {
+                                //     return "Please Select Birth Month";
+                                //   }
+                                //   return null;
+                                // },
                                 onChanged: (value) {
                                   setState(() {
                                     monthSelected = value.toString();
@@ -646,13 +646,13 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                                           ),
                                         ))
                                     .toList(),
-                                validator: (value) {
-                                  if (value == null ||
-                                      value.toString().isEmpty) {
-                                    return "Please Select Birth Year";
-                                  }
-                                  return null;
-                                },
+                                // validator: (value) {
+                                //   if (value == null ||
+                                //       value.toString().isEmpty) {
+                                //     return "Please Select Birth Year";
+                                //   }
+                                //   return null;
+                                // },
                                 onChanged: (value) {
                                   setState(() {
                                     yearSelected = value.toString();
@@ -723,12 +723,12 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                                       ),
                                     ))
                                 .toList(),
-                            validator: (value) {
-                              if (value.toString().isEmpty || value == null) {
-                                return "Please Select State/Region";
-                              }
-                              return null;
-                            },
+                            // validator: (value) {
+                            //   if (value.toString().isEmpty || value == null) {
+                            //     return "Please Select State/Region";
+                            //   }
+                            //   return null;
+                            // },
                             onChanged: (value) {
                               setState(() {
                                 stateSelected = value.toString();
@@ -909,12 +909,12 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                           child: TextFormField(
                             scrollPadding: const EdgeInsets.only(bottom: 40),
                             textInputAction: TextInputAction.next,
-                            validator: (value) {
-                              if (value == null || value.toString().isEmpty) {
-                                return "Professinal Field/ အသက်မွေး၀မ်ကျောင်းအလုပ် is Required";
-                              }
-                              return null;
-                            },
+                            // validator: (value) {
+                            //   if (value == null || value.toString().isEmpty) {
+                            //     return "Professinal Field/ အသက်မွေး၀မ်ကျောင်းအလုပ် is Required";
+                            //   }
+                            //   return null;
+                            // },
                             keyboardType: TextInputType.text,
                             style: const TextStyle(
                               height: 1.0,
@@ -1023,12 +1023,12 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                           },
                           scrollPadding: const EdgeInsets.only(bottom: 40),
                           textInputAction: TextInputAction.next,
-                          validator: (value) {
-                            if (value == null || value.toString().isEmpty) {
-                              return "Password is Required";
-                            }
-                            return null;
-                          },
+                          // validator: (value) {
+                          //   if (value == null || value.toString().isEmpty) {
+                          //     return "Password is Required";
+                          //   }
+                          //   return null;
+                          // },
                           obscureText: true,
                           keyboardType: TextInputType.text,
                           style: const TextStyle(
@@ -1163,20 +1163,7 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                               width: MediaQuery.of(context).size.width * 0.3,
                               height: 55,
                               onTap: () {
-                                if (_formKey.currentState!.validate()) {
-                                  _formKey.currentState!.save();
-                                  // register(
-                                  //     context,
-                                  //     userNameController.text.toString(),
-                                  //     passwordController.text.toString(),
-                                  //     confirmPasswordController.text.toString(),
-                                  //     emailController.text.toString(),
-                                  //     phoneController.text.toString(),
-                                  //     "dob",
-                                  //     stateSelected.toString(),
-                                  //     categorySelected.toString(),
-                                  //     professionalController.text.toString());
-                                  ref
+                                ref
                                       .read(authControllerProvider.notifier)
                                       .register(
                                         name:
@@ -1201,7 +1188,6 @@ class _RegisterNameScreenState extends ConsumerState<RegisterNameScreen> {
                                         profession: professionalController.text
                                             .toString(),
                                       );
-                                }
                               },
                               buttonText:
                                   'Create Account / အကောင့်သစ် ဖွင့်မယ်။',
