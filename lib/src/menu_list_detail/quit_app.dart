@@ -9,7 +9,7 @@ class QuitApplication extends StatelessWidget {
     return Dialog(
       backgroundColor: Colors.transparent,
       child: SizedBox(
-        width: 350,
+        width: MediaQuery.of(context).size.width * 0.5,
         height: 200,
         child: Stack(
           children: [
@@ -45,7 +45,7 @@ class QuitApplication extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Exited Application',
+                  'Application မှ ထွက်မည်လား။',
                   style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,

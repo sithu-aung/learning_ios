@@ -21,8 +21,8 @@ class Chapter1TextPopUpWidget extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       padding: EdgeInsets.only(
-          left: MediaQuery.of(context).size.width * 0.2,
-          right: MediaQuery.of(context).size.width * 0.2),
+          left: MediaQuery.of(context).size.width * 0.1,
+          right: MediaQuery.of(context).size.width * 0.1),
       color: Colors.black.withOpacity(0.7),
       child: Container(
           width: MediaQuery.of(context).size.width * 0.6,
@@ -66,7 +66,7 @@ class Chapter1TextPopUpWidget extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.7,
                   margin: const EdgeInsets.only(left: 12),
                   padding:
-                      const EdgeInsets.only(left: 30, bottom: 16, right: 50),
+                      const EdgeInsets.only(left: 40, bottom: 16, right: 20),
                   child: Padding(
                     padding: const EdgeInsets.only(right: 12),
                     child: SingleChildScrollView(

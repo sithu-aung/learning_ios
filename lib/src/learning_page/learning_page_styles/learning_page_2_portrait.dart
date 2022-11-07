@@ -75,11 +75,11 @@ class _LearningPage2PortraitState extends State<LearningPage2Portrait> {
                     const Color.fromARGB(200, 113, 101, 45),
                     12),
                 margin: EdgeInsets.only(
-                  top: 60,
+                  top: 68,
                   left: MediaQuery.of(context).size.width * 0.09,
                 ),
                 width: MediaQuery.of(context).size.width * 0.4,
-                height: MediaQuery.of(context).size.height * 0.8,
+                height: MediaQuery.of(context).size.height * 0.7,
                 padding: const EdgeInsets.only(
                     right: 8, top: 8, bottom: 12, left: 12),
                 child: Stack(
@@ -110,11 +110,11 @@ class _LearningPage2PortraitState extends State<LearningPage2Portrait> {
                 ),
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.8,
                 width: MediaQuery.of(context).size.width * 0.4,
-                margin: const EdgeInsets.only(
+                height: MediaQuery.of(context).size.height * 0.72,
+                margin: EdgeInsets.only(
                   left: 12,
-                  right: 20,
+                  right: MediaQuery.of(context).size.width * 0.09,
                   bottom: 8,
                   top: 68,
                 ),

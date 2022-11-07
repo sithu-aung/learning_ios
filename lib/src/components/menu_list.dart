@@ -399,7 +399,7 @@ class _MenuListScreenState extends State<MenuListScreen> {
                                     child: Padding(
                                       padding: EdgeInsets.only(top: 22),
                                       child: Text(
-                                        "Application မှ ထွက်မည်",
+                                        "Application မှ ထွက်မည်။",
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
